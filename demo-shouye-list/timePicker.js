@@ -7,6 +7,8 @@ class TimePicker extends Component {
         this.state = {
             senconds: 0
         }
+
+        this.tick = this.tick.bind(this);
     }
 
     componentDidMount() {
@@ -15,7 +17,7 @@ class TimePicker extends Component {
         }, 1000)
     }
 
-    tick = () => {
+    tick () {
         this.setState((preState) => ({
             senconds: preState.senconds + 1
         }))
